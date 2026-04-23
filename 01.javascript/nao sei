@@ -1,0 +1,4 @@
+let vitorias, empates 
+let pontos 
+vitorias = prompt("vitórias:")
+vitorias = Number(vitorias)
