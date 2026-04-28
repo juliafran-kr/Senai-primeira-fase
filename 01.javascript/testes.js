@@ -22,7 +22,7 @@ nome = "Abiduzido"
 
 let vitorias, empates 
 let pontos 
-vitorias = prompt("vitórias:")
+vitorias = prompt("vitorias:")
 vitorias = Number(vitorias)
 
 empates = Number(prompt("empates: "))
