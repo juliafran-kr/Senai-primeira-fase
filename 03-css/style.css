@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(252, 121, 186);
+}
+output{
+    color: rgb(253, 253, 253);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+}
+button{
+    background-color: rgb(240, 164, 204);
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
