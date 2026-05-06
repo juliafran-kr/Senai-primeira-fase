@@ -107,12 +107,12 @@ alert("sobrou para o juca ser feliz: " + saldo)
    }
 
    function adivinharNumero(){
-    let numero = Math.ceil(Math.random()* 3) // 1..10
-   //  console.log(numero) 
-   //  numero = numero * 10
+    let numero = Math.ceil(Math.random()* 10) // 1..10
+    //console.log(numero) 
+   //numero = numero * 10
    // console.log(numero)
-   //  numero = Math.ceil(numero)
-   //  console.log(numero)
+     //numero = Math.ceil(numero)
+    // console.log(numero)
    let chute = Number(prompt("fala um número: "))
     if(chute == numero){
       resposta.innerHTML = "ACERTOU MISERÁVEL!"
@@ -120,4 +120,91 @@ alert("sobrou para o juca ser feliz: " + saldo)
       resposta.innerHTML = "ERROU!!"
    }
 
+   }
+
+   function mostrarDiaDaSemana(){
+      let numero, dia 
+      numero = Number(prompt("digite o numero: "))
+      if(numero == 1){
+           dia = "domingo"
+      }else if(numero == 2){
+         dia = "segunda"      
+      }else if(numero == 3){
+         dia = "terça"
+
+      }else if(numero == 4){
+         dia = "quarta"
+
+      }else if(numero == 5){
+         dia = "quinta"
+      }else if(numero == 6){
+         dia = "sexta"
+      }else if(numero == 7){
+         dia = "sabado"
+      }else{
+         dia = "erro "
+      }
+      document.getElementById("resultado").innerHTML = dia 
+   }
+   function calcularParImpar(){
+      numero = Number(prompt("digite o numero: "))
+      if(numero%2 == 0){
+         alert(" é par")
+      }else{
+         alert("é impar")
+      }
+       
+   }
+
+   function calculoDasPecas(){
+      let codigo1,numero1,codigo2,numero2,valorunitario1, valorunitario2, valortotal1,valortotal2,valortotal
+     codigo1 = Number(prompt("qual o codigo da peça 1:"))
+    numero1 = Number(prompt("quantas peças pegou 1:"))
+    valorunitario1= Number(prompt("valor unitario 1:"))
+      valortotal1 = numero1 * valorunitario1
+    codigo2 = Number(prompt("qual o codigo da peça 2:"))
+    numero2 = Number(prompt("quantas peças pegou 2:"))
+    valorunitario2 = Number(prompt("valor unitario 2:"))
+    valortotal2= numero2 * valorunitario2
+    valortotal = valortotal1 + valortotal2
+    console.log("TOTAL: R$" + valortotal.toFixed(2))
+       document.getElementById("resultado").innerHTML = "total:" + valortotal.toFixed(2)
+   }
+
+   function revelarRecreio(){
+      document.getElementById("resultado").innerHTML = "<br>inicicio: 20:30" + "<br>fim: 20:45" + "<br>chamada: 20:50"
+      
+   }
+   function consumoCarro(){
+      let distanciaPercorrida, totalCombustivel, consumoMedio
+      distanciaPercorrida = Number(prompt("qual foi a distancia percorrida: "))
+      totalCombustivel = Number(prompt("quanto de combustivel gastou: "))
+      consumoMedio = distanciaPercorrida / totalCombustivel 
+      console.log("consumo médio: " + consumoMedio.toFixed(3))
+      document.getElementById("resultado").innerHTML = "consumo médio total: " + consumoMedio.toFixed(3)
+       
+   }
+
+   function idadeCachorro(){
+      let idade, idadeHumana
+      idade = Number(prompt("qual a idade do bidu: "))
+      idadeHumana = idade * 7
+      if(idadeHumana > 60){
+         alert("Bidu precisa se aposentar")
+
+      }else{
+         alert("Bidu pode descansar")
+      }
+
+   }
+   function IMCPESOeALTURA(){
+      let peso, altura, imc 
+      peso = Number(prompt("qual o seu peso: "))
+      altura = Number(prompt("qual a sua altura: "))
+      imc = peso / (altura * altura)
+      if(imc < 25){
+         alert("seu indice esta abaixo de 25")
+      }else{
+         alert("seu indice esta acima de 25")
+      }
    }
