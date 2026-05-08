@@ -205,6 +205,64 @@ alert("sobrou para o juca ser feliz: " + saldo)
       if(imc < 25){
          alert("seu indice esta abaixo de 25")
       }else{
-         alert("seu indice esta acima de 25")
+         alert("seu indice esta acima de 25   ")
       }
    }
+
+ function refatoracaoDonaBete(){
+   let totalBruto, valorPrem, presentes, comissao, lucroFinal, lucroMeta
+   totalBruto = Number(prompt("faturamento do valor bruto: R$ "))
+   valorPrem = Number(prompt("faturamento do valor pago nas premiações: R$"))
+   presentes = Number(prompt("valor gasto com presentes: R$"))
+   comissao = Number(prompt("valor das comissões: R$"))
+   lucroMeta = Number(prompt("qual é a meta do lucro?"))
+   lucroFinal = totalBruto - valorPrem - presentes - comissao
+   console.log("lucro liquido da dona bete foi de: R$ " + lucroFinal.toFixed(2))
+   if(lucroFinal >= lucroMeta){
+        alert("parabens a meta foi batida")
+   }else{
+      alert("a meta nao foi batida infelizmente")
+   }
+ }
+
+ function valeTroca(){
+   let preco, valeTroca, quantidade
+   preco = Number(prompt("preço dos pares de calçados trocados: R$ "))
+   quantidade = Number(prompt("quantidade de pares trocados: R$ "))
+   if(quantidade > 100){
+      alert("limite de 100 pares excedidos")
+      alert("por favor, entrar em contato diretamente com a fábrica.")
+   }else if(preco <= 0 && quantidade <= 0){
+      alert("o preco e quantidade deve ser maior que zero")
+   }else{
+      valeTroca = preco * quantidade
+      alert("ganhou um vale troca")
+      alert("a loja vai receber no total: R$" + valeTroca.toFixed(2))
+   }
+ }
+
+ function trajetoPomar(){
+   let quantidadeInicial, quantidadeFinal, totalVendas
+   quantidadeInicial = Number(prompt("Quantidade inicial de laranjas: "))
+   quantidadeFinal = Number(prompt("quantidade final de laranjas: ")) 
+   totalVendas = quantidadeInicial - quantidadeFinal
+   if(totalVendas <= 0){
+      alert("estoque deve ser maior no próximo dia.")
+}else if(totalVendas >= 0){
+   alert("vendas ok")
+}
+ }
+
+ function capitaoGansoRefatoracao(){
+   let gastoSuprimento, gastoMercadoria, faturamentoIngresso, faturamentoVendaItens, lucroReais, lucroPorcentual 
+   gastoSuprimento = Number(prompt("gasto em suprimento: "))
+   gastoMercadoria = Number(prompt("gasto com mercadoria: "))
+   let gastos = gastoMercadoria + gastoSuprimento
+   faturamentoIngresso = Number(prompt("faturou com ingressos: "))
+   faturamentoVendaItens = Number(prompt("faturou com os itens: "))
+   lucroReais = faturamentoIngresso + faturamentoVendaItens - gastos
+   lucroPorcentual = lucroReais * 100 / gastos
+   
+resposta.innerHTML = "lucro: R$" + lucroReais.toFixed(2) + " | " + lucroPorcentual + '%'
+
+ }

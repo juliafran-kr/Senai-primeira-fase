@@ -22,4 +22,3 @@ programa {
      escreva("ganhou um vale troca")
      escreva("a loja vai receber no total: R$", valeTroca)
   }
-}
